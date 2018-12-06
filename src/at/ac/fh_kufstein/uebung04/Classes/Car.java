@@ -3,9 +3,9 @@ package at.ac.fh_kufstein.uebung04.Classes;
 public class Car
 {
 
-    private String color;
-    private int wheels;
-    private double speed;
+    String color;
+    int wheels;
+    double speed;
 
     public Car(String color, int wheels, double speed){
         this.color = color;
