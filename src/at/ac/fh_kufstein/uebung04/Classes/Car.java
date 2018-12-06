@@ -7,9 +7,17 @@ public class Car
     private int wheels;
     private double speed;
 
+    public Car(String color, int wheels, double speed){
+        this.color = color;
+        this.wheels = wheels;
+        this.speed = speed;
+    }
+
+    public Car(){}
+
     public void currentSpeed()
     {
-        System.out.println(this.speed);
+        System.out.println("Die Geschwindigkeit beträgt: " + this.speed);
     }
 
 }
