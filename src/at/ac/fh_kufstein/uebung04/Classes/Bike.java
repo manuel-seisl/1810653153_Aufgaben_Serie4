@@ -11,6 +11,8 @@ public class Bike extends Car
         this.maxspeed = maxspeed;
     }
 
+    public Bike(){}
+
     public double getMaxspeed()
     {
         return maxspeed;
@@ -21,6 +23,32 @@ public class Bike extends Car
         this.maxspeed = maxspeed;
     }
 
-    public Bike(){}
+    public void accelerate(double speed)
+    {
+
+        double newspeed = super.speed += speed;
+
+        if(newspeed > this.maxspeed){
+            System.out.println("Höchstgeschwindikeit erreicht!");
+            super.speed = maxspeed;
+        } else {
+            super.speed += speed;
+        }
+
+    }
+
+    public void slowdown(double speed)
+    {
+
+        double newspeed = super.speed -= speed;
+
+        if(newspeed < 0){
+            System.out.println("Bike steht jetzt");
+            super.speed = 0;
+        } else {
+            super.speed -= speed;
+        }
+
+    }
 
 }
